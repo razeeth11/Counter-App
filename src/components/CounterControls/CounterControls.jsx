@@ -9,6 +9,8 @@ export function CounterControls({ setCount }) {
       setCount((prev) => {
         if (prev > 0) {
           return prev - 1;
+        } else {
+          return 0;
         }
       });
     } else if (type === "increment") {

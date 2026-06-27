@@ -5,8 +5,8 @@ import { CounterDisplay } from "./components/CounterDisplay/CounterDisplay";
 import { CounterControls } from "./components/CounterControls/CounterControls";
 
 function App() {
-  const countFromLocalStorage = JSON.parse(localStorage.getItem("count"));
-  const [count, setCount] = useState(countFromLocalStorage || 0);
+  const countFromLocalStorage = localStorage.getItem("count");
+  const [count, setCount] = useState(+countFromLocalStorage || 0);
 
   useEffect(() => {
     localStorage.setItem("count", count);
